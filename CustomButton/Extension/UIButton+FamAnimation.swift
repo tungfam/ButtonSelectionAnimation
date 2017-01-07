@@ -45,10 +45,10 @@ class UIButton_FamAnimation: UIButton {
                 })
             }
         }
-        
     }
     
     private func unselectionAnimation() {
+        self.isSelected = self.aSelected
         UIView.animate(withDuration: self.selectionDuration, animations: {
             self.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         }) { (finished) in
@@ -56,7 +56,6 @@ class UIButton_FamAnimation: UIButton {
                 self.transform = CGAffineTransform(scaleX: 0.0001, y: 0.0001)
                 self.alpha = 0.0
             }) { (finished) in
-                self.isSelected = self.aSelected
                 UIView.animate(withDuration: self.selectionDuration, animations: {
                     self.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                     self.alpha = 1.0

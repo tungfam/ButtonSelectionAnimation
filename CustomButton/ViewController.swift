@@ -18,16 +18,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // set up selection animation button
+        // 1. set up selection animation button
         setUpSelectionAnimationButton()
         
-        // set up press animation button
+        // 2. set up press animation button
         setUpPressAnimationButton()
         
-        // set up magnification animation button
+        // 3. set up magnification animation button
         setUpMagnificationAnimationButton()
         
-        // set up fam animation button
+        // 4. set up fam animation button
         setUpFamAnimationButton()
         
     }

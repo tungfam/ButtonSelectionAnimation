@@ -5,7 +5,7 @@ UIButton subclass which performs animation on selection. Check it out!
 ![alt tag](https://github.com/tungfam/ButtonSelectionAnimation/blob/master/CustomButton.gif)
 </kbd>
 
-_nevermind the quality of the selected button. it looks good on iphone. gif reduced the quality_
+_note: please nevermind the quality of the selected button. it looks good on iphone. gif reduced the quality_
 
 
 ## Description ##

@@ -48,4 +48,21 @@ class UIButton_SelectionAnimation: UIButton {
         }
     }
     
+    func setDefaultImage(withName imageName: String)  {
+        if let image = UIImage(named: imageName) {
+            self.setImage(image, for: .normal)
+        }
+    }
+    
+    func setSelectedImage(withName imageName: String, withColor color: UIColor) {
+        if let image = UIImage(named: imageName)?.withRenderingMode(.alwaysTemplate)  {
+            self.setImage(image, for: .selected)
+            self.tintColor = color
+        }
+        
+        if let image = UIImage(named: imageName)?.withRenderingMode(.alwaysTemplate)  {
+            self.setImage(image, for: .highlighted)
+            self.tintColor = color
+        }
+    }
 }

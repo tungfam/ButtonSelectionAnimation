@@ -49,9 +49,6 @@ class UIButton_FamAnimation: UIButton {
     }
     
     private func unselectionAnimation() {
-        
-        
-        
         UIView.animate(withDuration: self.selectionDuration, animations: {
             self.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         }) { (finished) in
@@ -67,4 +64,18 @@ class UIButton_FamAnimation: UIButton {
             }
         }
     }
+    
+    func setDefaultImage(withName imageName: String)  {
+        if let image = UIImage(named: imageName) {
+            self.setImage(image, for: .normal)
+        }
+    }
+    
+    func setSelectedImage(withName imageName: String, withColor color: UIColor) {
+        if let image = UIImage(named: imageName)?.withRenderingMode(.alwaysTemplate)  {
+            self.setImage(image, for: .selected)
+            self.tintColor = color
+        }
+    }
+    
 }

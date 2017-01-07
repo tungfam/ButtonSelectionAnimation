@@ -21,7 +21,7 @@ class UIButton_PressAnimation: UIButton {
     
     @objc private func pressAnimation()   {
         UIView.animate(withDuration: self.pressDuration, animations: {
-            self.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            self.transform = CGAffineTransform(scaleX: 0.85, y: 0.85)
         })
     }
     
@@ -29,6 +29,24 @@ class UIButton_PressAnimation: UIButton {
         UIView.animate(withDuration: self.pressDuration, animations: {
             self.transform = CGAffineTransform(scaleX: 1, y: 1)
         })
+    }
+    
+    func setDefaultImage(withName imageName: String)  {
+        if let image = UIImage(named: imageName) {
+            self.setImage(image, for: .normal)
+        }
+    }
+    
+    func setSelectedImage(withName imageName: String, withColor color: UIColor) {
+        if let image = UIImage(named: imageName)?.withRenderingMode(.alwaysTemplate)  {
+            self.setImage(image, for: .selected)
+            self.tintColor = color
+        }
+        
+        if let image = UIImage(named: imageName)?.withRenderingMode(.alwaysTemplate)  {
+            self.setImage(image, for: .highlighted)
+            self.tintColor = color
+        }
     }
 
 }

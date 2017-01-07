@@ -35,19 +35,9 @@ class ViewController: UIViewController {
     /* 1. Begin: Selection animation related */
     
     func setUpSelectionAnimationButton()    {
-        if let image = UIImage(named: "stop") {
-            self.selectionAnimationButton.setImage(image, for: .normal)
-        }
-        
-        if let image = UIImage(named: "stop")?.withRenderingMode(.alwaysTemplate)  {
-            self.selectionAnimationButton.setImage(image, for: .selected)
-            self.selectionAnimationButton.tintColor = UIColor.red
-        }
-        
-        if let image = UIImage(named: "stop")?.withRenderingMode(.alwaysTemplate)  {
-            self.selectionAnimationButton.setImage(image, for: .highlighted)
-            self.selectionAnimationButton.tintColor = UIColor.red
-        }
+        self.selectionAnimationButton.setDefaultImage(withName: "icon_name")
+        let selectedColor = UIColor.red
+        self.selectionAnimationButton.setSelectedImage(withName: "icon_name", withColor: selectedColor)
     }
     
     @IBAction func selectionAnimationButtonAction(_ sender: UIButton_SelectionAnimation) {
@@ -63,19 +53,9 @@ class ViewController: UIViewController {
     /* 2. Begin: Press animation related */
 
     func setUpPressAnimationButton()    {
-        if let image = UIImage(named: "stop") {
-            self.pressAnimationButton.setImage(image, for: .normal)
-        }
-        
-        if let image = UIImage(named: "stop")?.withRenderingMode(.alwaysTemplate)  {
-            self.pressAnimationButton.setImage(image, for: .selected)
-            self.pressAnimationButton.tintColor = UIColor.green
-        }
-        
-        if let image = UIImage(named: "stop")?.withRenderingMode(.alwaysTemplate)  {
-            self.pressAnimationButton.setImage(image, for: .highlighted)
-            self.pressAnimationButton.tintColor = UIColor.green
-        }
+        self.pressAnimationButton.setDefaultImage(withName: "icon_name")
+        let selectedColor = UIColor.green
+        self.pressAnimationButton.setSelectedImage(withName: "icon_name", withColor: selectedColor)
         
         self.pressAnimationButton.animateOnPress(true)
     }
@@ -92,19 +72,9 @@ class ViewController: UIViewController {
     /* 3. Begin: Magnification animation related */
     
     func setUpMagnificationAnimationButton()    {
-        if let image = UIImage(named: "stop") {
-            self.magnificationAnimationButton.setImage(image, for: .normal)
-        }
-        
-        if let image = UIImage(named: "stop")?.withRenderingMode(.alwaysTemplate)  {
-            self.magnificationAnimationButton.setImage(image, for: .selected)
-            self.magnificationAnimationButton.tintColor = UIColor.purple
-        }
-        
-        if let image = UIImage(named: "stop")?.withRenderingMode(.alwaysTemplate)  {
-            self.magnificationAnimationButton.setImage(image, for: .highlighted)
-            self.magnificationAnimationButton.tintColor = UIColor.purple
-        }
+        self.magnificationAnimationButton.setDefaultImage(withName: "icon_name")
+        let selectedColor = UIColor.purple
+        self.magnificationAnimationButton.setSelectedImage(withName: "icon_name", withColor: selectedColor)
         
         self.magnificationAnimationButton.magnifyOnPress(true)
     }
@@ -121,14 +91,9 @@ class ViewController: UIViewController {
     /* 4. Begin: FAM (Fade-out and magnification) animation related */
     
     func setUpFamAnimationButton()    {
-        if let image = UIImage(named: "stop") {
-            self.famAnimationButton.setImage(image, for: .normal)
-        }
-        
-        if let image = UIImage(named: "stop")?.withRenderingMode(.alwaysTemplate)  {
-            self.famAnimationButton.setImage(image, for: .selected)
-            self.famAnimationButton.tintColor = UIColor.yellow
-        }
+        self.famAnimationButton.setDefaultImage(withName: "icon_name")
+        let selectedColor = UIColor.yellow
+        self.famAnimationButton.setSelectedImage(withName: "icon_name", withColor: selectedColor)
     }
     
     @IBAction func famAnimationButtonAction(_ sender: UIButton_FamAnimation) {

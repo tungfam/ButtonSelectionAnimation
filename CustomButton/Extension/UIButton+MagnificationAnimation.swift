@@ -21,7 +21,7 @@ class UIButton_MagnificationAnimation: UIButton {
     
     @objc private func magnifyAnimation()   {
         UIView.animate(withDuration: self.magnificationDuration, animations: {
-            self.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+            self.transform = CGAffineTransform(scaleX: 1.15, y: 1.15)
         })
     }
     
@@ -31,4 +31,21 @@ class UIButton_MagnificationAnimation: UIButton {
         })
     }
 
+    func setDefaultImage(withName imageName: String)  {
+        if let image = UIImage(named: imageName) {
+            self.setImage(image, for: .normal)
+        }
+    }
+    
+    func setSelectedImage(withName imageName: String, withColor color: UIColor) {
+        if let image = UIImage(named: imageName)?.withRenderingMode(.alwaysTemplate)  {
+            self.setImage(image, for: .selected)
+            self.tintColor = color
+        }
+        
+        if let image = UIImage(named: imageName)?.withRenderingMode(.alwaysTemplate)  {
+            self.setImage(image, for: .highlighted)
+            self.tintColor = color
+        }
+    }
 }

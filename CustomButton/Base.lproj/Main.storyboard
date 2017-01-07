@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomButton" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +21,90 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05Z-6z-Nec" customClass="UIButton_SelectionAnimation" customModule="CustomButton" customModuleProvider="target">
+                                <rect key="frame" x="46" y="90" width="30" height="34"/>
+                                <connections>
+                                    <action selector="selectionAnimationButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jmA-Sa-xo5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5r-yO-q0B" customClass="UIButton_PressAnimation" customModule="CustomButton" customModuleProvider="target">
+                                <rect key="frame" x="46" y="210" width="30" height="34"/>
+                                <connections>
+                                    <action selector="pressAnimationButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HWj-Rm-dPw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRy-rX-Y08" customClass="UIButton_MagnificationAnimation" customModule="CustomButton" customModuleProvider="target">
+                                <rect key="frame" x="46" y="330" width="30" height="34"/>
+                                <connections>
+                                    <action selector="magnificationAnimationButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gxP-Ty-2we"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. SelectionAnimation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYZ-gi-J0R">
+                                <rect key="frame" x="106" y="97" width="164" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. PressAnimation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8n-zO-Gf5">
+                                <rect key="frame" x="106" y="217" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. MagnificationAnimation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRn-nN-BTx">
+                                <rect key="frame" x="106" y="337" width="199" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvA-ha-Kte" customClass="UIButton_FamAnimation" customModule="CustomButton" customModuleProvider="target">
+                                <rect key="frame" x="46" y="450" width="30" height="34"/>
+                                <connections>
+                                    <action selector="famAnimationButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4wB-mm-p74"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. FamAnimation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imv-Vn-oMG">
+                                <rect key="frame" x="106" y="457" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAM = Fade-out And Magnification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Czm-pA-FYn">
+                                <rect key="frame" x="106" y="478" width="197" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Czm-pA-FYn" firstAttribute="leading" secondItem="Imv-Vn-oMG" secondAttribute="leading" id="6HC-eQ-iXf"/>
+                            <constraint firstItem="WRy-rX-Y08" firstAttribute="top" secondItem="i5r-yO-q0B" secondAttribute="bottom" constant="86" id="AGl-Ge-rHM"/>
+                            <constraint firstItem="qvA-ha-Kte" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="HZX-1i-Mhh"/>
+                            <constraint firstItem="WYZ-gi-J0R" firstAttribute="centerY" secondItem="05Z-6z-Nec" secondAttribute="centerY" id="MUC-og-5Gs"/>
+                            <constraint firstItem="Imv-Vn-oMG" firstAttribute="leading" secondItem="qvA-ha-Kte" secondAttribute="trailing" constant="30" id="PLd-iq-W89"/>
+                            <constraint firstItem="MRn-nN-BTx" firstAttribute="centerY" secondItem="WRy-rX-Y08" secondAttribute="centerY" id="QhP-PJ-4yJ"/>
+                            <constraint firstItem="05Z-6z-Nec" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="RE6-Tm-Hff"/>
+                            <constraint firstItem="WRy-rX-Y08" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="Vhc-mv-Cyc"/>
+                            <constraint firstItem="Czm-pA-FYn" firstAttribute="top" secondItem="Imv-Vn-oMG" secondAttribute="bottom" id="W1g-j0-cDl"/>
+                            <constraint firstItem="MRn-nN-BTx" firstAttribute="leading" secondItem="WRy-rX-Y08" secondAttribute="trailing" constant="30" id="WXc-o1-Nki"/>
+                            <constraint firstItem="s8n-zO-Gf5" firstAttribute="centerY" secondItem="i5r-yO-q0B" secondAttribute="centerY" id="cDY-70-ldu"/>
+                            <constraint firstItem="i5r-yO-q0B" firstAttribute="top" secondItem="05Z-6z-Nec" secondAttribute="bottom" constant="86" id="cJZ-Sc-IYa"/>
+                            <constraint firstItem="05Z-6z-Nec" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="cXM-pZ-YZO"/>
+                            <constraint firstItem="Imv-Vn-oMG" firstAttribute="centerY" secondItem="qvA-ha-Kte" secondAttribute="centerY" id="hsW-6Q-qsO"/>
+                            <constraint firstItem="s8n-zO-Gf5" firstAttribute="leading" secondItem="i5r-yO-q0B" secondAttribute="trailing" constant="30" id="kCW-es-HgT"/>
+                            <constraint firstItem="WYZ-gi-J0R" firstAttribute="leading" secondItem="05Z-6z-Nec" secondAttribute="trailing" constant="30" id="lci-k7-TNX"/>
+                            <constraint firstItem="qvA-ha-Kte" firstAttribute="top" secondItem="WRy-rX-Y08" secondAttribute="bottom" constant="86" id="wmE-xJ-wBJ"/>
+                            <constraint firstItem="i5r-yO-q0B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="xJI-jC-3xr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="famAnimationButton" destination="qvA-ha-Kte" id="m48-WQ-A9S"/>
+                        <outlet property="magnificationAnimationButton" destination="WRy-rX-Y08" id="IKL-Wh-C1J"/>
+                        <outlet property="pressAnimationButton" destination="i5r-yO-q0B" id="MbZ-8X-fvX"/>
+                        <outlet property="selectionAnimationButton" destination="05Z-6z-Nec" id="9Gf-H8-ngz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

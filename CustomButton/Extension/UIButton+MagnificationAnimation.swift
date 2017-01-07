@@ -10,12 +10,25 @@ import UIKit
 
 class UIButton_MagnificationAnimation: UIButton {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    let magnificationDuration = 0.1
+    
+    func magnifyOnPress(_ animate: Bool)   {
+        if animate  {
+            self.addTarget(self, action: #selector(self.magnifyAnimation), for: .touchDown)
+            self.addTarget(self, action: #selector(self.unmagnifyAnimation), for: .touchUpInside)
+        }
     }
-    */
+    
+    @objc private func magnifyAnimation()   {
+        UIView.animate(withDuration: self.magnificationDuration, animations: {
+            self.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        })
+    }
+    
+    @objc private func unmagnifyAnimation()   {
+        UIView.animate(withDuration: self.magnificationDuration, animations: {
+            self.transform = CGAffineTransform(scaleX: 1, y: 1)
+        })
+    }
 
 }

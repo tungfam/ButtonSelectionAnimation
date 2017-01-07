@@ -18,5 +18,5 @@ There are 4 different custom subclusses of UIButton. Hope it will be useful for 
 2. Clone or Download ButtonSelectionAnimation github repo.
 3. Assign the chosen custom class to the button you want to animate.
 Custom classes are in folder `Extension`.
-4. Check out `ViewController.swift` class to see how to simply implement the animation.
+4. Check out `ViewController.swift` class to see how to simply implement the animation into your code.
 5. Done! Enjoy the button animation :)

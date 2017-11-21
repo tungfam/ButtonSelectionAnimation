@@ -1,9 +1,7 @@
 # ButtonSelectionAnimation
 UIButton subclass which performs animation on selection. Check it out!
 
-<kbd>
-![alt tag](https://github.com/tungfam/ButtonSelectionAnimation/blob/master/CustomButton.gif)
-</kbd>
+<img src="CustomButton.gif" width="400">
 
 _note: please nevermind the quality of the selected buttons. it looks perfect on iphone or simulator. gif reduces the quality_
 
